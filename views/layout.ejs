@@ -2,35 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Wellbeing Assessment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
 </head>
+
 
 <body>
     <header>
-        <nav class="nav navbar-inverse">
-            <!-- <a href="/" class="navbar-brand"> My App</a> -->
-            <ul class="nav navbar-nav">
-                <li> 
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact</a>
-                </li>
 
-            </ul>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/prosperous">Prosperous</a>
+                        </li>
+                        <li>
+                            <a href="/resilient">Resilient</a>
+                        </li>
+                        <li>
+                            <a href="/healthier">Healthier</a>
+                        </li>
+                        <li>
+                            <a href="/equal">Equal</a>
+                        </li>
+                        <li>
+                            <a href="/cohesive">Cohesive</a>
+                        </li>
+                        <li>
+                            <a href="/vibrant">Vibrant</a>
+                        </li>
+                        <li>
+                            <a href="/global">Global</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
+
 
     <%- defineContent('hero') %>
 
@@ -40,8 +76,9 @@
             </div>
         </main>
 
-        <footer> 
+        <footer>
             <site class="Copyright"> Awesome site</site>
         </footer>
 </body>
+
 </html>

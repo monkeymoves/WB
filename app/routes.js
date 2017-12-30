@@ -29,27 +29,27 @@ router.get('/about', function(req, res) {
   res.render('pages/about', { users: users });
 });
 
-router.get('/contact', function (req, res) {
-  res.render('pages/prosperous', { user: "luke", title: wellbeingGoals.WBprosperous.name, content: wellbeingGoals.WBprosperous.content });
+
+
+router.get('/prosperous', function (req, res) {
+  res.render('pages/form', { user: "luke", url: wellbeingGoals.WBprosperous.url, title: wellbeingGoals.WBprosperous.name, content: wellbeingGoals.WBprosperous.content });
 });
+router.post('/prosperous', function (req, res) {
 
-
-router.post('/contact', function (req, res) {
-
-  var myobj = {
-    projectID: "Newport Wetlands", address: "taffs", positive: req.body.positive, negative: req.body.negative,
+  var data = {
+    projectID: "Newport Wetlands", wellbeingCategory: wellbeingGoals.WBprosperous.name, address: "taffs", positive: req.body.positive, negative: req.body.negative,
     mitigation: req.body.mitigation, rank: req.body.rank
   };
   MongoClient.connect(url, function (err, client) {
     if (err) throw err;
     var db = client.db('glitch_db');
-    db.collection("songs").insertOne(myobj, function (err, res) {
+    db.collection("songs").insertOne(data, function (err, res) {
       if (err) throw err;
       console.log("1 document inserted");
       client.close();
     });
   });
-  res.send(myobj);
-  // res.send('Thanks for contacting us, ' + req.body.positive + '! We will respond shortly!' + JSON.stringify(myobj)); 
+  res.send(data);
+  // res.send('Thanks for contacting us, ' + req.body.positive + '! We will respond shortly!' + data +  JSON.stringify(data)); 
 });
 
